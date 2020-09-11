@@ -1,0 +1,48 @@
+@b: #000;
+.sc(@s,@cx){
+     border: 1px dotted @b;
+     height: @s;
+     width: @cx;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ss{
+     .sc(300px,500px);
+    
+    margin: auto;
+  .dw(r);
+    div{
+        .sc(200px, 100px);
+        .dw(a,30px,50px);
+        background: #555;
+        div{
+            .sc(20px,20px);
+            .dw(b,20px,30px);
+        }
+    }
+    
+}
+.dw(r){
+    position: relative;
+}
+.dw(a, @tp, @ls) {
+    position: absolute;
+    top: @tp;
+    left: @ls;
+}
+.dw(b, @tp, @ls) {
+    position: absolute;
+    bottom:  @tp;
+    left: @ls;
+}
+.dw(c, @tp, @ls) {
+    position: absolute;
+    top: @tp;
+    left: @ls;
+}
+.dw(f) {
+    position: fixed;
+}
